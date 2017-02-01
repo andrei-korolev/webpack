@@ -1,0 +1,22 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrei-korolev/webpack.git"
+  },
+  "author": "Andrei Korolev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrei-korolev/webpack/issues"
+  },
+  "homepage": "https://github.com/andrei-korolev/webpack#readme",
+  "devDependencies": {
+    "webpack": "2.2.1"
+  }
+}
