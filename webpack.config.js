@@ -4,10 +4,17 @@ const NODE_ENV = process.env.NODE_ENV || 'development',
       webpack = require('webpack');
 
 module.exports = {
-    entry: './home',
+    context: __dirname + '/scripts/dev',
+
+    entry: {
+        home: './home',
+        about: './about'
+    },
+
     output: {
-        filename: 'build.js',
-        library: 'home'
+        path: __dirname + '/scripts',
+        filename: '[name].js',
+        library: '[name]'
     },
 
     devtool: NODE_ENV == 'development' ? 'inline-source-map' : false,
@@ -31,7 +38,9 @@ if (NODE_ENV == 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
+                warnings: false,
+                drop_console: true,
+                unsafe: true
             }
         })
     );
