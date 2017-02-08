@@ -31,7 +31,12 @@ module.exports = {
         }]
     },
 
-    plugins: []
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            minChunks: 2
+        })
+    ]
 };
 
 if (NODE_ENV == 'production') {
