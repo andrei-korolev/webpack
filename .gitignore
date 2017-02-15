@@ -3,3 +3,4 @@ node_modules/
 
 # Scripts
 scripts/*.js
+assets.json
