@@ -24,11 +24,14 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.js$/,
+            include: __dirname + '/scripts/dev',
             loader: 'babel-loader',
             query: {
                 presets: ['es2015']
             }
-        }]
+        }],
+
+        noParse: /\/jquery\/jquery.js/
     },
 
     plugins: [
